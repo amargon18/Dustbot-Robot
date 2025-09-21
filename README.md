@@ -17,6 +17,9 @@ dustbot_ws
 ├── SetDirection.srv
 └── LoadGarbage.srv
 
+<img width="252" height="329" alt="image" src="https://github.com/user-attachments/assets/b76b3f58-23a1-40bd-8540-fa2c8a1fe78e" />
+
+
 - world_node.py: This code defines the `WorldNode` in ROS 2, responsible for managing a robot on an NxN grid. It publishes the robot's position (`/dustbot/global_position`) and the garbage's position (`/dustbot/garbage_position`), while responding to services for moving the robot (`/dustbot/set_direction`) and collecting garbage (`/dustbot/load_garbage`). Once P garbage items are collected, the node automatically shuts down.
 
 - robot_node.py: This code defines the `RobotNode` in ROS 2, responsible for controlling a robot that moves toward garbage positions published on `/dustbot/garbage_position`. The node calculates directions, updates the robot's position, and attempts to collect the garbage by interacting with services `/dustbot/set_direction` and `/dustbot/load_garbage`. It also ensures the robot stops once it has collected all designated garbage.
