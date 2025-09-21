@@ -3,19 +3,6 @@
 The final goal of the project is to create a virtual robot (DustBot) that navigates an environment, locating and collecting trash. Using ROS 2 and custom services (`SetDirection` and `LoadGarbage`), the robot moves to random positions where trash is located and collects it. The system is designed to operate in a configurable grid size, with interaction between control and simulation nodes to manage movement and trash collection.
 
 1. PROJECT STRUCTURE.
-dustbot_ws
-└── src
-├── dustbot
-│ ├── dustbot
-│ │ ├── world_node.py
-│ │ └── robot_node.py
-│ └── launch
-│ └── dustbot_launch.py
-│
-└── dustbot_interfaces
-└── srv
-├── SetDirection.srv
-└── LoadGarbage.srv
 
 <img width="252" height="329" alt="image" src="https://github.com/user-attachments/assets/b76b3f58-23a1-40bd-8540-fa2c8a1fe78e" />
 
