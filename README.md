@@ -4,30 +4,18 @@ The final goal of the project is to create a virtual robot (DustBot) that naviga
 
 1. PROJECT STRUCTURE.
 dustbot_ws
-|
-|__src
-    |
-    |__dustbot
-    |        |
-    |        |__dustbot
-    |        |        |
-    |        |        |__world_node.py
-    |        |        |
-    |        |        |__robot_node.py
-    |        |    
-    |        |___________ launch
-    |                        |
-    |                        |__dustbot_launch.py
-    |    
-    |
-    |__dustbot_interfaces
-                        |
-                        |__srv
-                            |
-                            |__SetDirection.srv
-                            |
-                            |__LoadGarbage.srv
-
+└── src
+├── dustbot
+│ ├── dustbot
+│ │ ├── world_node.py
+│ │ └── robot_node.py
+│ └── launch
+│ └── dustbot_launch.py
+│
+└── dustbot_interfaces
+└── srv
+├── SetDirection.srv
+└── LoadGarbage.srv
 
 - world_node.py: This code defines the `WorldNode` in ROS 2, responsible for managing a robot on an NxN grid. It publishes the robot's position (`/dustbot/global_position`) and the garbage's position (`/dustbot/garbage_position`), while responding to services for moving the robot (`/dustbot/set_direction`) and collecting garbage (`/dustbot/load_garbage`). Once P garbage items are collected, the node automatically shuts down.
 
